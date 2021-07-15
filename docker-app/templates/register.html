@@ -1,15 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
     <div class="content-section">
-<form  method="POST" action="">
+<form  method="POST" action="/register">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Confirm Password</label>
@@ -18,9 +18,17 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
+{% if msg %}
+<div class="border-top pt-3">
+        <small class="text-muted">
+		{{ msg }} <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+        </small>
+</div>
+{% else %}
 <div class="border-top pt-3">
         <small class="text-muted">
             Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
         </small>
-    </div>
+</div>
+{% endif %}
 {% endblock content %}
