@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, redirect, jsonify, request
+from flask import Flask, render_template, session, redirect, jsonify, request, redirect, url_for
 from passlib.hash import pbkdf2_sha256
 import uuid
 from functools import wraps
@@ -77,6 +77,8 @@ def login_required(f):
 
 @app.route('/')
 def home():
+    if 'logged_in' in session and session['logged_in'] == True:
+        return redirect(url_for('dashboard'))
     return render_template('home.html')
 
 

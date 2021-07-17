@@ -25,6 +25,23 @@
       </p>
     
     </div>
-  
+
+    <div class="card2">
+
+      <h2 class="center">Docker Utilities</h2>
+
+      <p>
+      	<button onclick="getImages();" class="btn btn--secondary" type="button">Images</button>
+	<button onclick="getContainers();" class="btn btn--secondary" type="button">Containers</button>
+	<button class="btn btn--secondary" type="button">Run a Container</button>
+	<button class="btn btn--secondary" type="button">Remove a Container</button>
+      </p>
+    </div>
+   
+    <div id='div1' class="card3"></div> 
+ 
   </div>
+
+
+  <script src="/static/js/docker.js"></script>
 {% endblock %}
