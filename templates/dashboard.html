@@ -33,11 +33,31 @@
       <p>
       	<button onclick="getImages();" class="btn btn--secondary" type="button">Images</button>
 	<button onclick="getContainers();" class="btn btn--secondary" type="button">Containers</button>
-	<button class="btn btn--secondary" type="button">Run a Container</button>
+	<button onclick="runpop();" class="btn btn--secondary" type="button">Run a Container</button>
 	<button class="btn btn--secondary" type="button">Remove a Container</button>
       </p>
     </div>
-   
+  
+ <div id='rundiv' class="cardpop">
+
+      <h1 class="center">Run a container</h1>
+
+
+        <label for="name">Name</label>
+        <input type="text" id="nameid" name="name" class="field" required>
+
+        <label for="image">Image</label>
+        <input type="text" id="imageid" name="image" class="field" required>
+
+        <p class="error error--hidden"></p>
+
+	<button type="button" onclick="runContainer();" class="btn">Run</button>
+	<button type="button" style="background:red" onclick="closeRunPop();" class="btn">Close</button>
+
+
+
+    </div>
+
     <div id='div1' class="card3"></div> 
  
   </div>

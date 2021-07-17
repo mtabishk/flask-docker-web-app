@@ -18,3 +18,26 @@ function getContainers() {
         }
 }
 
+function runContainer() {
+	name = document.getElementById('nameid').value;
+	image = document.getElementById('imageid').value;
+	console.log(name,image);
+        var xhr = new XMLHttpRequest();
+	var url = "http://13.232.129.9/cgi-bin/cmd.py?cmd=docker+run+-dit+--name+" + name + "+" + image;
+        xhr.open("GET", url, true);
+        xhr.send();
+        xhr.onload = function () {
+                var res = xhr.responseText;
+                document.getElementById('div1').innerHTML = res;
+        }
+}
+
+function runpop(){
+	pop= document.getElementById("rundiv");
+	pop.style.display="block";
+
+}
+function closeRunPop(){
+	pop= document.getElementById("rundiv");
+	pop.style.display="none";
+}

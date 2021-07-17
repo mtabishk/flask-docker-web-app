@@ -132,6 +132,39 @@ p {
         border-radius: 0;
     }
 }
+
+#rundiv{
+    margin: 0 30px 60px;
+    padding: 20px 40px;
+    width: 1180px;
+    box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background: var(--white);
+    display: none;
+}
+.cardpop {
+    margin: 0 30px 60px;
+    padding: 20px 40px;
+    width: 1180px;
+    box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background: var(--white);
+    display: none;
+}
+
+@media only screen and(max-width: 520px) {
+    .cardpop-wrapper {
+        padding: 30px 0 0;
+    }
+}
+
+@media only screen and(max-width: 520px) {
+    .cardpop {
+        margin: 0 0 30px;
+        width: 100%;
+        border-radius: 0;
+    }
+}
 /* Forms */
 form {
     transition: opacity 0.15s ease;
@@ -202,6 +235,8 @@ label {
     background: var(--primary);
     transition: color 0.15s ease, background-color 0.15s ease;
 }
+
+
 
 .btn:hover {
     background: var(--primary-dark);
