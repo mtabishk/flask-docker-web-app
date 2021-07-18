@@ -41,3 +41,26 @@ function closeRunPop(){
 	pop= document.getElementById("rundiv");
 	pop.style.display="none";
 }
+
+function removeContainer() {
+        id = document.getElementById('nameid2').value;
+        console.log(id);
+        var xhr = new XMLHttpRequest();
+        var url = "http://13.232.129.9/cgi-bin/cmd.py?cmd=docker+rm+-f+" + id;
+        xhr.open("GET", url, true);
+        xhr.send();
+        xhr.onload = function () {
+                var res = xhr.responseText;
+                document.getElementById('div1').innerHTML = res;
+        }
+}
+
+function removepop(){
+        pop= document.getElementById("removediv");
+        pop.style.display="block";
+
+}
+function closeRemovePop(){
+        pop= document.getElementById("removediv");
+        pop.style.display="none";
+}

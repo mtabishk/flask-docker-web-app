@@ -30,6 +30,20 @@ body {
     color: var(--black);
     background: var(--grey-light);
 }
+/* nav bar */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #2391e6;
+  overflow: hidden;
+}
+
+.topnav-h {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0px 0px;
+  text-decoration: none;
+  font-size: 28px;
+}
 
 /* Typography */
 .center {
@@ -57,7 +71,7 @@ p {
 /* Cards */
 .card-wrapper {
     margin: 0 auto;
-    padding: 90px 30px;
+    padding: 20px 30px;
     flex-wrap: wrap;
     justify-content: center;
     display: flex;
@@ -87,8 +101,8 @@ p {
 }
 
 .card2 {
-    margin: 0 30px 60px;
-    padding: 20px 40px;
+    margin: 0 20px 60px;
+    padding: 10px 40px;
     width: 1180px;
     box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -110,8 +124,8 @@ p {
 }
 
 .card3 {
-    margin: 0 30px 60px;
-    padding: 20px 40px;
+    margin: 0 20px 60px;
+    padding: 10px 40px;
     width: 1180px;
     box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -164,6 +178,25 @@ p {
         width: 100%;
         border-radius: 0;
     }
+}
+
+#removediv{
+    margin: 0 30px 60px;
+    padding: 20px 40px;
+    width: 1180px;
+    box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background: var(--white);
+    display: none;
+}
+.cardpop2 {
+    margin: 0 30px 60px;
+    padding: 20px 40px;
+    width: 1180px;
+    box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background: var(--white);
+    display: none;
 }
 /* Forms */
 form {

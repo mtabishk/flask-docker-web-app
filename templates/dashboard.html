@@ -34,7 +34,7 @@
       	<button onclick="getImages();" class="btn btn--secondary" type="button">Images</button>
 	<button onclick="getContainers();" class="btn btn--secondary" type="button">Containers</button>
 	<button onclick="runpop();" class="btn btn--secondary" type="button">Run a Container</button>
-	<button class="btn btn--secondary" type="button">Remove a Container</button>
+	<button onclick="removepop();" class="btn btn--secondary" type="button">Remove a Container</button>
       </p>
     </div>
   
@@ -56,9 +56,26 @@
 
 
 
-    </div>
+ </div>
 
-    <div id='div1' class="card3"></div> 
+ <div id='removediv' class="cardpop2">
+
+      <h1 class="center">Remove a container</h1>
+
+
+        <label for="name">Container ID</label>
+        <input type="text" id="nameid2" name="name" class="field" required>
+
+        <p class="error error--hidden"></p>
+
+        <button type="button" onclick="removeContainer();" class="btn">Remove</button>
+        <button type="button" style="background:red" onclick="closeRemovePop();" class="btn">Close</button>
+
+
+
+ </div>
+
+ <div id='div1' class="card3"></div> 
  
   </div>
 
